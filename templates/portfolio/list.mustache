@@ -1,0 +1,28 @@
+<!-- loop for project list -->
+{{#project_list}}
+<!-- project [{{id}}] {{slug}} -->
+<ol id="project-list">
+	<li class="title">
+		<p class="description">{{title}}</p>
+		<p class="description">{{for}}</p>
+	</li>
+	{{#images}}
+		<li>
+			<a href="{{current_url}}/{{slug}}">
+				<img src="/content/{{filename}}" alt"{{{description}}}" title="{{title}}" />
+			</a>
+		</li>
+	{{/images}}
+</ol>
+<!-- / project -->
+{{/project_list}}
+
+
+
+
+	
+<div class="debug">
+	<pre>
+___ {{load}} ___
+	</pre>
+</div>

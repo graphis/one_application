@@ -1,0 +1,55 @@
+{{#sent}}
+<h2>Mail Sent!</h2>
+<p>If you have any questions, please call Zsolt at +36 70 257 5720.</p>
+{{/sent}}
+{{^sent}}
+<h2>Mail me</h2>
+<p><em>We would really appreciate getting your RSVP no later than August 1<sup>st</sup>!</em></p>
+<form id="rsvp" action method="post">
+	<dl>
+		<dt>Your name?</h2>
+		<dd><input type="text" name="your_name" value="{{post.your_name}}" placeholder="John Doe" /></dd>
+		{{#errors.your_name}}
+		<dd class="error">{{errors.your_name}}</dd>
+		{{/errors.your_name}}
+
+		<dt>Email address?</dt>
+		<dd><input type="email" name="email_address" value="{{post.email_address}}" placeholder="you@example.com" /></dd>
+		{{#errors.email_address}}
+		<dd class="error">{{errors.email_address}}</dd>
+		{{/errors.email_address}}
+
+		<dt>Message?</dt>
+		<dd><input type="message" name="message_text" value="{{post.message_text}}" placeholder="Lorem ipsum" /></dd>
+		{{#errors.message_text}}
+		<dd class="error">{{errors.message_text}}</dd>
+		{{/errors.message_text}}
+
+<!--		<dt>How many guests, including yourself?</dt>
+		<dd>
+			<input type="number" name="total_guests" min="0" max="10" value="{{post.total_guests}}" placeholder="0" />
+			<span class="or">/</span>
+			<label class="inline">
+				<input type="checkbox" name="not_attending" value="yes" {{#post.not_attending}}checked {{/post.not_attending}} />
+				Sorry, I can't make it!
+			</label>
+		</dd>
+		{{#errors.total_guests}}
+		<dd class="error">{{errors.total_guests}}</dd>
+		{{/errors.total_guests}}
+		{{#errors.not_attending}}
+		<dd class="error">{{errors.not_attending}}</dd>
+		{{/errors.not_attending}}-->
+
+		<dd class="help">We need a maximum guest count, so include anyone that might be attending, even if they decide not to come.</dd>
+		<dd class="submit"><button class="small black nice button" type="submit">Send</button></dd>
+	</dl>
+</form>
+{{/sent}}
+
+
+<div class="debug">
+	<pre>
+___ {{load}} ___
+	</pre>
+</div>

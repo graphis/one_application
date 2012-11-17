@@ -1,0 +1,59 @@
+<!-- loop for project detail -->
+{{#project_detail}}
+<!-- project detail [{{id}}] {{slug}} -->
+<div id="project-detail">
+
+	{{#images}}
+		<img src="/content/{{filename}}">
+	{{/images}}
+
+	<p class="description">{{{title}}}</p>
+	<p class="description">{{slug}}</p>
+	<p class="description">{{{description}}}</p>
+	<p class="description">{{{for}}}</p>
+
+	<!-- prev next buttons -->
+	<div id="pager">
+	{{#pager}}
+	{{#prev}}<a href="{{zzz_url}}/{{prev}}">PREVIOUS</a>{{/prev}}
+	{{#next}}<a href="{{zzz_url}}/{{next}}">NEXT</a>{{/next}}
+	{{/pager}}
+	{{^pager}}
+	____
+	{{/pager}}
+	</div>
+	<!-- / prev next buttons -->
+
+</div>
+<!-- / project -->
+{{/project_detail}}
+
+<!-- loop for project list -->
+{{#project_list}}
+<!-- project [{{id}}] {{slug}} -->
+<ol id="project-list-exp">
+	<li class="title">
+		<p class="description">{{title}}</p>
+		<p class="description">{{for}}</p>
+	</li>
+	{{#images}}
+		<li>
+			<a href="{{zzz_url}}/{{slug}}">
+				<img src="/content/{{filename}}" alt"{{{description}}}" title="{{title}}" />
+			</a>
+		</li>
+	{{/images}}
+</ol>
+<!-- / project -->
+{{/project_list}}
+
+
+
+
+
+<!-- DEBUG 
+<div class="debug">
+	<pre>
+___ {{load}} ___
+	</pre>
+</div>-->
