@@ -10,7 +10,7 @@
  * @copyright  (c) 2012 Zsolt Sándor
  * @license    http://kohanaphp.com/license.html
  */
-class View_Portfolio_Exp extends View_Layout {
+class View_Project_Detail extends View_Layout {
 
 	public $project_list;
 	public $project_detail;
