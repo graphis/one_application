@@ -40,7 +40,7 @@ class Controller_Work extends Controller {
 		if (isset($this->project_slug) AND isset($this->page_slug))
 		{
 			// call _project_detail function
-			$this->view = new View_Portfolio_Exp; // details and list together
+			$this->view = new View_Project_Detail; // details and list together
 			$this->_project_detail();
 			$this->_project_list();
 
@@ -57,7 +57,7 @@ class Controller_Work extends Controller {
 		// if only page_slug is set then print only a project list
 		else if (isset($this->page_slug))
 		{
-			$this->view = new View_Portfolio_List;
+			$this->view = new View_Project_List;
 			$this->_project_list();
 
 			if ($this->project_list['status'] == Model_Project::FAILURE)
