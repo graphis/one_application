@@ -10,8 +10,8 @@ My portfolio site
 Required modules
 
     > database
-    > kostache 4.0
-  > email / swiftmailer
+      kostache 4.0
+	  email / swiftmailer
 	
 
 Ajax page load
